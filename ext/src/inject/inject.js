@@ -14,32 +14,30 @@ var formBody = new FormData();
 formBody.set("ytlink",encodeURIComponent(href));
 formBody.set("lang",lang);
 
-fetch(`localhost:5000/transcript/`,
+fetch(`http://localhost:5000/transcript`,
 {
     method: 'POST',
-    body: formBody.join("&"),
+    body: 'ytlink=youtube.com%2Fwatch%3Fv%3Dr_It_X7v-1E&lang=en',
     headers: {
-        'Content-Type': 'application/x-www-form-urlencoded'
+        'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
     }
-}).then(response =>{
-    subArray = response.json();
-});
+}).then(function(response) { 
+    // console.log(response.stringify());
+    return response.json() }
+    //bogus values for rate. comment out when object file contains actual rates
+).then(subArray => {
+    console.log(subArray);
+    var video = document.getElementsByTagName("video")[0];
+    var arrayLength = subArray.length;
 
-//bogus values for rate. comment out when object file contains actual rates
-subArray.forEach(element => {
-    element["rate"] = Math.random() * 2 + 0.5;
-});
-
-var video = document.getElementsByTagName("video")[0];
-var arrayLength = subArray.length;
-
-video.ontimeupdate = () => {
-    for (let i = 0; i < arrayLength; i++) {
-        const section = subArray[i];
-        if (video.currentTime > section.start && video.currentTime < (section.start + section.duration)) {
-            video.playbackRate = section.rate;
-            return;
+    video.ontimeupdate = () => {
+        for (let i = 0; i < arrayLength; i++) {
+            const section = subArray[i];
+            if (video.currentTime > section.start && video.currentTime < (section.start + section.duration)) {
+                video.playbackRate = section.rate;
+                return;
+            }
+            video.playbackRate = 1;
         }
-        video.playbackRate = 1;
     }
-}
+});
