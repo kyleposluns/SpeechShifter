@@ -4,6 +4,7 @@ import json
 
 import regex
 from youtube_transcript_api import YouTubeTranscriptApi
+from app import sentencegrader
 
 
 def video_id(link):
@@ -11,5 +12,15 @@ def video_id(link):
 
 
 def transcript(link, lang="en"):
-    return json.dumps(YouTubeTranscriptApi.get_transcript(video_id(link), languages=[lang]))
-
+    
+    # output = json(YouTubeTranscriptApi.get_transcript(video_id(link), languages=[lang]))
+    # for item in output:
+    a = YouTubeTranscriptApi.get_transcript(video_id(link), languages=[lang])
+    for item in a:
+        item.update(
+            {
+                "rate" : sentencegrader.flesch_reading_ease(item["text"]) / 100
+            }
+        )
+    print(a)
+    return json.dumps(a)

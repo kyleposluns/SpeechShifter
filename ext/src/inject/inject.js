@@ -22,10 +22,10 @@ fetch(`http://localhost:5000/transcript`,
 
     var arrayLength = subArray.length;
 
-    subArray.forEach(element => {
-        element["rate"] = Math.random() * 2 + 0.5;
-        console.log(element);
-    }); //give bogus values for now. delete when rates are already calculated.
+    // subArray.forEach(element => {
+    //     element["rate"] = Math.random() * 2 + 0.5;
+    //     console.log(element);
+    // }); //give bogus values for now. delete when rates are already calculated.
     
     var video = document.getElementsByTagName("video")[0];
     video.ontimeupdate = () => {
