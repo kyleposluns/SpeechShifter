@@ -1,12 +1,7 @@
 certifi==2019.9.11
 chardet==3.0.4
-Click==7.0
 EasyProcess==0.2.7
-Flask==1.1.1
 idna==2.8
-itsdangerous==1.1.0
-Jinja2==2.10.1
-MarkupSafe==1.1.1
 protobuf==3.9.1
 pytz==2019.2
 PyVirtualDisplay==0.2.4
@@ -15,6 +10,5 @@ requests==2.22.0
 selenium==3.141.0
 six==1.12.0
 urllib3==1.25.3
-Werkzeug==0.15.6
 xvfbwrapper==0.2.9
 youtube-transcript-api==0.1.7

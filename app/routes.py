@@ -1,6 +1,0 @@
-
-
-
-@route('')
-def index():
-    pass
