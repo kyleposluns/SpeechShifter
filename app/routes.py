@@ -9,7 +9,7 @@ def index():
     return "Hello World"
 
 
-@app.route('/transcript', methods=["GET"])
+@app.route('/transcript', methods=["POST"])
 def transcript():
     yt_link = request.form['ytlink']
     lang = request.form['lang']
