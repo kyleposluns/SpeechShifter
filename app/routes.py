@@ -1,6 +1,6 @@
 from app import app
 from flask import request
-from app.download_srt import transcript
+from app import download_srt
 
 
 @app.route('/')
@@ -14,4 +14,4 @@ def transcript():
     yt_link = request.form['ytlink']
     lang = request.form['lang']
 
-    return transcript(yt_link, lang)
+    return download_srt.transcript(yt_link, lang)
