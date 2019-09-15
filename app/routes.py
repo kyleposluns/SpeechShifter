@@ -15,5 +15,4 @@ def transcript():
     yt_link = request.form['ytlink']
     lang = request.form['lang']
 
-    
     return download_srt.transcript(yt_link, lang)

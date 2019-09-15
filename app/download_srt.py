@@ -12,15 +12,9 @@ def video_id(link):
 
 
 def transcript(link, lang="en"):
-    
     # output = json(YouTubeTranscriptApi.get_transcript(video_id(link), languages=[lang]))
     # for item in output:
     a = YouTubeTranscriptApi.get_transcript(video_id(link), languages=[lang])
     for item in a:
-        item.update(
-            {
-                "rate" : sentencegrader.flesch_reading_ease(item["text"]) / 100
-            }
-        )
-    print(a)
+        item.update({"rate": sentencegrader.flesch_reading_ease(item["text"]) / 100})
     return json.dumps(a)
