@@ -5,3 +5,4 @@ app = Flask(__name__)
 
 from app import routes
 from app import download_srt
+from app import sentencegrader
