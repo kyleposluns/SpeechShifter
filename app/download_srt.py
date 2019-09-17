@@ -19,7 +19,7 @@ def transcript(link, lang="en"):
     for item in a:
         item.update(
             {
-                "rate" : sentencegrader.flesch_reading_ease(item["text"]) / 100
+                "rate" : sentencegrader.flesch_reading_ease(item["text"]) / 150
             }
         )
     print(a)
