@@ -54,10 +54,10 @@ Steps:
 Thank you to HackMIT staff, mentors, and sports for the amazing event!
 
 ### Contributers: 
-- Matt Tu
-- Naren (Ganesh) Kolli
-- Dominik Ritzenhoff
-- Kyle Posluns
+- Matt Tu [GitHub](github.com/2matttu)
+- Naren (Ganesh) Kolli [GitHub](github.com/gkolli)
+- Dominik Ritzenhoff [GitHub](github.com/ddritzenhoff)
+- Kyle Posluns [GitHub](github.com/kyleposluns)
 
 ### Special Thanks To:
 - James Packard
