@@ -12,7 +12,6 @@ def video_id(link):
 
 
 def transcript(link, lang="en"):
-    
     # output = json(YouTubeTranscriptApi.get_transcript(video_id(link), languages=[lang]))
     # for item in output:
     a = YouTubeTranscriptApi.get_transcript(video_id(link), languages=[lang])
