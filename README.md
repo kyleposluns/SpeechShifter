@@ -61,3 +61,6 @@ Thank you to HackMIT staff, mentors, and sports for the amazing event!
 
 ### Special Thanks To:
 - James Packard
+
+### Devpost
+- [here](https://www.devpost.com/software/speechshifter)
