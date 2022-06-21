@@ -30,7 +30,7 @@ itsdangerous==1.1.0
 Jinja2==2.10.1
 MarkupSafe==1.1.1
 murmurhash==1.0.2
-numpy==1.17.2
+numpy==1.22.0
 paramiko==2.6.0
 plac==0.9.6
 preshed==2.0.1
