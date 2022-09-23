@@ -34,7 +34,7 @@ numpy==1.17.2
 paramiko==2.6.0
 plac==0.9.6
 preshed==2.0.1
-protobuf==3.9.1
+protobuf==3.18.3
 pyasn1==0.4.7
 pyasn1-modules==0.2.6
 pycparser==2.19
